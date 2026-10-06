@@ -37,7 +37,7 @@ function App() {
     <main className="arcade-shell">
       <header className="hero">
         <div className="hero-copy">
-          <p className="eyebrow">DOCS VERIFY DV1006 // INSERT COIN</p>
+          <p className="eyebrow">BASE CODE LAB // INSERT COIN</p>
           <h1>Retro Arcade <span>44</span></h1>
           <p className="hero-description">
             A tiny playable React arcade built for testing, tinkering, and shipping changes.
