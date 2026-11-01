@@ -50,3 +50,4 @@ Try these as separate branches or prompts:
 10. Ask Base Code to explain the architecture before changing anything.
 
 The repo is intentionally dependency-light so failures are more likely to reveal something about the coding workflow than about infrastructure.
+
