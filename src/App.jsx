@@ -3,6 +3,7 @@ import './App.css'
 import Snake from './games/Snake'
 import MemoryMatch from './games/MemoryMatch'
 import WhackAPixel from './games/WhackAPixel'
+import SpaceInvaders from './games/SpaceInvaders'
 
 const games = [
   {
@@ -26,6 +27,13 @@ const games = [
     description: 'Twenty seconds. One blinking invader. Questionable reflexes.',
     component: WhackAPixel,
   },
+  {
+    id: 'invaders',
+    label: 'Space Invaders',
+    icon: '🚀',
+    description: 'Four rows of pixel aliens are marching. Hold the line and blast them first.',
+    component: SpaceInvaders,
+  },
 ]
 
 function App() {
@@ -46,7 +54,7 @@ function App() {
         <div className="status-panel" aria-label="Demo app status">
           <span className="status-light" />
           <div>
-            <strong>3 games online</strong>
+            <strong>{games.length} games online</strong>
             <small>React + Vite · no backend</small>
           </div>
         </div>
