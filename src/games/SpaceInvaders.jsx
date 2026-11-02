@@ -141,14 +141,15 @@ function SpaceInvaders() {
         keysRef.current.right = true
         return
       }
-      if (event.key === ' ' || event.key === 'Spacebar') {
-        if (document.activeElement instanceof HTMLElement && document.activeElement.tagName === 'BUTTON') return
+      if (event.key === ' ' && gameRef.current.running) {
         event.preventDefault()
-        shoot()
+        if (!event.repeat) shoot()
       }
     }
 
     const onKeyUp = (event) => {
+      // Stop a focused button (e.g. RESTART) from being activated by Space mid-game.
+      if (event.key === ' ' && gameRef.current.running) event.preventDefault()
       if (event.key === 'ArrowLeft' || event.key === 'a' || event.key === 'A') keysRef.current.left = false
       if (event.key === 'ArrowRight' || event.key === 'd' || event.key === 'D') keysRef.current.right = false
     }
